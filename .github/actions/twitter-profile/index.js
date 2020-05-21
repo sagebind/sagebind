@@ -1,4 +1,5 @@
 const core = require("@actions/core");
+const fs = require("fs");
 const Twitter = require("twitter-lite");
 
 async function run() {
