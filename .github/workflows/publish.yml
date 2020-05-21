@@ -1,0 +1,21 @@
+name: Publish
+on:
+  push:
+    branches: [master]
+
+jobs:
+  github:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Publish to GitHub
+      uses: actions/github-script@v1.1.0
+      with:
+        script: |
+          const fs = require("fs");
+          
+          github.users.updateAuthenticated({
+            bio: fs.readFileSync("bio.md", "utf8")
+          });
+        debug: true 
