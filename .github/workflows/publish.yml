@@ -12,6 +12,7 @@ jobs:
     - name: Publish to GitHub
       uses: actions/github-script@v1.1.0
       with:
+        github-token: ${{secrets.GH_PAT}} 
         script: |
           const fs = require("fs");
           
