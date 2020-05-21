@@ -8,15 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Publish to GitHub
       uses: actions/github-script@v1.1.0
       with:
-        github-token: ${{secrets.GH_PAT}} 
+        github-token: ${{secrets.GH_PAT}}
         script: |
           const fs = require("fs");
-          
+
           github.users.updateAuthenticated({
             bio: fs.readFileSync("bio.md", "utf8")
           });
-        debug: true 
+
+  twitter:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish to Twitter
+      uses: ./.github/actions/twitter-profile
+      with:
+        consumer-key: ${{secrets.TWITTER_CONSUMER_KEY}}
+        consumer-secret: ${{secrets.TWITTER_CONSUMER_SECRET}}
+        access-token-key: ${{secrets.TWITTER_ACCESS_TOKEN_KEY}}
+        access-token-secret: ${{secrets.TWITTER_ACCESS_TOKEN_SECRET}}

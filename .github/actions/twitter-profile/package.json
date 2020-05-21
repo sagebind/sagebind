@@ -1,0 +1,8 @@
+{
+  "name": "twitter-profile",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "twitter-lite": "^0.13.0"
+  }
+}

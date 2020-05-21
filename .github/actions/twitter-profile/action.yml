@@ -1,0 +1,18 @@
+name: Twitter Profile
+description: Update Twitter profile
+inputs:
+  consumer-key:
+    description: Twitter consumer API key
+    required: true
+  consumer-secret:
+    description: Twitter consumer API secret
+    required: true
+  access-token-key:
+    description: Twitter access token key
+    required: true
+  access-token-secret:
+    description: Twitter access token secret
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
