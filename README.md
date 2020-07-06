@@ -1,3 +1,1 @@
-# Bio
-
-This is a really stupid experiment (ab)using GitHub Actions that updates my social media profile information based on the state in this repo whenever the `master` branch is updated.
+Hello there! I'm a full-time software engineer that is passionate about web and system software, efficiency, and open-source. I work on open-source projects in my spare time. Currently working on Rust-related projects.
